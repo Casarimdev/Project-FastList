@@ -1,0 +1,198 @@
+/* Fonts */
+/* Inter - Font-family: 'Inter' */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Colors */
+:root{
+    --primary-color: #0E0F25;  
+    --secondary-content: #374151;
+    --background-color: #F4F5FB; 
+}
+
+/* 
+Main Style */
+body{
+    background-color: var(--background-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.h1-Fast{
+    color: #374151;
+    text-align: center;
+    font-family: 'Inter';
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: bold;
+    padding-top: 10vh;
+}
+
+.main-content{
+    height: auto;
+    width: 43vw;
+    padding-top: 10vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-add-item{
+    width: auto;
+    display: flex;
+    padding-bottom: 5vh;
+    align-items: center; /* Certifica que o input e o botão estejam alinhados no centro */
+}
+
+#input-add{
+    height: 5.28vh;
+    width: 30.68vw;
+    background-color: #FFFF;
+    border: 2px solid #D1D5DB;
+    border-radius: 12px;
+    margin-right: 4vh;
+}
+
+#input-add:focus{
+    border: 2px solid #D1D5DB !important;
+}
+
+#btn{
+    background-color: #CA3884;
+    border-radius: 12px;
+    height: 5.28vh;
+    width: 10.8vw;
+    border: none;
+    font-family: 'Inter';
+    color: #FFFF;
+    cursor: pointer;
+}
+
+#btn:hover{
+    background-color: #A52C6B;
+}
+
+.p-buy{
+    font-family: 'Inter';
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 500;
+    padding-bottom: 6vh;
+}
+
+.list {
+    display: flex;
+    padding-left: 0 !important;
+    flex-direction: column;
+    height: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.list::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.list::-webkit-scrollbar-thumb {
+    background-color: var(--secondary-content);
+    border-radius: 10px;
+}
+
+#input-standard{
+    margin-right: 2vh;
+}
+
+.item-list{
+    height: 5.88vh;
+    width: 42.65vw;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 2vh;
+    padding-right: 4vh;
+    background-color: #FFFF;
+    align-items: center;
+    border-radius: 12px;
+    font-family: 'Inter';
+    margin-top: 2vh;
+    opacity: 1 !important;
+    transition: opacity 5s ease-in-out !important;
+}
+
+.remove-opacity {
+    opacity: 0 !important;
+    transition: opacity 5s ease-in-out !important;
+}
+
+.item-removed{
+    height: 5.28vh;
+    width: 42.65vw;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 2vh;
+    padding-right: 4vh;
+    background-color: #C93847;
+    color: #FFFF;
+    align-items: center;
+    border-radius: 12px;
+    font-family: 'Inter';
+    margin-top: 2vh;
+    transition: 1s;
+}
+
+.margin{
+    margin-right: 1vh;
+}
+
+.clicker{
+    cursor: pointer;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .main-content {
+        width: 90vw;
+        padding-top: 5vh;
+    }
+
+    .form-add-item {
+        flex-direction: column; /* Coloca o botão abaixo do input */
+        align-items: stretch; /* Faz com que input e botão ocupem toda a largura */
+    }
+
+    #input-add {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 2vh;
+    }
+
+    #btn {
+        width: 100%;
+    }
+
+    .item-list, .item-removed {
+        width: 90vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .h1-Fast {
+        font-size: 20px;
+        padding-top: 5vh;
+    }
+
+    .p-buy {
+        font-size: 14px;
+    }
+
+    #btn, #input-add {
+        height: 6vh;
+    }
+}
